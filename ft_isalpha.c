@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rberrio- <rberrio-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/29 12:59:44 by rberrio-          #+#    #+#             */
-/*   Updated: 2023/11/29 13:38:01 by rberrio-         ###   ########.fr       */
+/*   Updated: 2023/12/22 12:29:39 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,3 +17,9 @@ int	ft_isalpha(int c)
 	else
 		return (0);
 }
+/*
+int main()
+{
+	printf("%d\n", ft_isalpha('a'));  // Imprime 1 si 'a' es alfabético
+	return 0;
+}*/
