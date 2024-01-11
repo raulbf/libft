@@ -3,19 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: rberrio- <rberrio-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 22:21:10 by marvin            #+#    #+#             */
-/*   Updated: 2023/12/27 22:21:10 by marvin           ###   ########.fr       */
+/*   Updated: 2024/01/11 20:09:26 by rberrio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*#include <stdio.h>*/
+#include <stdio.h>
 
-int ft_atoi(const char *str)
+int	ft_atoi(const char *str)
 {
-	int res;
-	int sign;
+	int	res;
+	int	sign;
 
 	res = 0;
 	sign = 1;
@@ -36,7 +36,7 @@ int ft_atoi(const char *str)
 		res = res * 10 + (*str - '0');
 		str++;
 	}
-	return sign * res;
+	return (sign * res);
 }
 
 /*int main()

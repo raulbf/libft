@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: rberrio- <rberrio-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/04 12:55:43 by marvin            #+#    #+#             */
-/*   Updated: 2024/01/04 12:55:43 by marvin           ###   ########.fr       */
+/*   Updated: 2024/01/11 20:22:08 by rberrio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,26 +14,24 @@
 #include <stdlib.h>
 #include <string.h>*/
 
-// Aquí está la definición de ft_malloc
-void*	ft_malloc(size_t size)
+void	*ft_malloc(size_t size)
 {
 	void* ptr;
-	ptr = malloc(size); // Asigna memoria con malloc
-	return ptr; // Devuelve el puntero a la memoria
+	ptr = malloc(size);
+	return (ptr);
 }
 
-// Aquí está la definición de ft_calloc
 void*	ft_calloc(size_t num, size_t size)
 {
-	size_t total_size = num * size; // Calcula el tamaño total de la memoria que necesitamos
-	void* ptr = ft_malloc(total_size); // Asigna memoria con ft_malloc
+	size_t total_size = num * size;
+	void* ptr = ft_malloc(total_size);
 
 	if (ptr)
-	{// Si la asignación fue exitosa
-	memset(ptr, 0, total_size); // Inicializa la memoria a cero
+	{
+	memset(ptr, 0, total_size);
 	}
 
-	return ptr; // Devuelve el puntero a la memoria
+	return ptr;
 }
 
 /*int main()

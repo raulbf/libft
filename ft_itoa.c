@@ -3,16 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: rberrio- <rberrio-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/04 23:08:31 by marvin            #+#    #+#             */
-/*   Updated: 2024/01/04 23:08:31 by marvin           ###   ########.fr       */
+/*   Updated: 2024/01/10 20:44:06 by rberrio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
-
-// Aquí va la definición de tu función ft_itoa
+#include <stdlib.h>
 
 int ft_numlen(int n)
 {
