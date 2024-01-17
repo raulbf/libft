@@ -6,16 +6,18 @@
 /*   By: rberrio- <rberrio-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/04 23:08:31 by marvin            #+#    #+#             */
-/*   Updated: 2024/01/10 20:44:06 by rberrio-         ###   ########.fr       */
+/*   Updated: 2024/01/17 13:04:25 by rberrio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <stdlib.h>
 
-int ft_numlen(int n)
+int	ft_numlen(int n)
 {
-	int len = 0;
+	int	len;
+
+	len = 0;
 	if (n <= 0)
 	{
 		len++;
@@ -26,19 +28,22 @@ int ft_numlen(int n)
 		len++;
 		n /= 10;
 	}
-	return len;
+	return (len);
 }
 
-char *ft_itoa(int n)
+char	*ft_itoa(int n)
 {
-	char *str;
-	int len = ft_numlen(n);
-	int sign = (n < 0) ? -1 : 1;
+	char	*str;
+	int		len;
+	int		sign;
 
+	len = ft_numlen(n);
+	sing = 1;
+	if (n < 0)
+		sign = -1;
 	str = (char *)malloc(sizeof(char) * (len + 1));
 	if (!str)
-		return NULL;
-
+		return (NULL);
 	str[len] = '\0';
 	if (n == 0)
 		str[0] = '0';
@@ -52,7 +57,7 @@ char *ft_itoa(int n)
 			n /= 10;
 		}
 	}
-	return str;
+	return (str);
 }
 
 /*
@@ -75,4 +80,8 @@ int main()
 	return 0;
 }
 */
-/*Este programa convierte el número -12345 en una cadena. Si la función ft_itoa funciona correctamente, el programa imprimirá “La cadena es: ‘-12345’”. Si la reserva de memoria falla, el programa imprimirá “Error al reservar memoria para la cadena.”.*/
+/*Este programa convierte el número -12345 en una cadena.
+Si la función ft_itoa funciona correctamente,
+el programa imprimirá “La cadena es: ‘-12345’”.
+Si la reserva de memoria falla,
+el programa imprimirá “Error al reservar memoria para la cadena.”.*/

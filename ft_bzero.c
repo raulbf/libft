@@ -6,7 +6,7 @@
 /*   By: rberrio- <rberrio-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/12 17:54:07 by rberrio-          #+#    #+#             */
-/*   Updated: 2024/01/11 20:39:21 by rberrio-         ###   ########.fr       */
+/*   Updated: 2024/01/17 12:21:11 by rberrio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,9 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	char *ptr = s;
+	char	*ptr;
+
+	*ptr = s;
 	while (n-- > 0)
 		*ptr++ = '\0';
 }

@@ -3,22 +3,22 @@
 /*                                                        :::      ::::::::   */
 /*   ft_malloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: rberrio- <rberrio-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/04 12:10:36 by marvin            #+#    #+#             */
-/*   Updated: 2024/01/04 12:10:36 by marvin           ###   ########.fr       */
+/*   Updated: 2024/01/17 13:07:35 by rberrio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*#include <stdio.h>
 #include <stdlib.h>*/
 
-void*	ft_malloc(size_t size)
+void	*ft_malloc(size_t size)
 {
-	void* ptr;
+	void	*ptr;
 
 	ptr = malloc(size);
-	return ptr;
+	return (ptr);
 }
 
 /*int main()

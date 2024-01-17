@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: rberrio- <rberrio-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/12 19:06:14 by rberrio-          #+#    #+#             */
-/*   Updated: 2023/12/22 12:59:39 by marvin           ###   ########.fr       */
+/*   Updated: 2024/01/17 13:05:15 by rberrio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,5 +40,5 @@ int main() {
     return 0;
 }
 Este programa inicializa una cadena src con el valor “Hola Mundo!”.
- Luego, utiliza la función ft_memmove para copiar el contenido de src a dst. Finalmente,
-  imprime la cadena dst.*/
+ Luego, utiliza la función ft_memmove para copiar el contenido de src a dst.
+ Finalmente,imprime la cadena dst.*/
