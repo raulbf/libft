@@ -3,34 +3,33 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: rberrio- <rberrio-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/04 21:50:51 by marvin            #+#    #+#             */
-/*   Updated: 2024/01/04 21:50:51 by marvin           ###   ########.fr       */
+/*   Updated: 2024/01/18 20:39:46 by rberrio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*#include <stdio.h>*/
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
-char *ft_strjoin(char const *s1, char const *s2)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char *joined_string;
-	size_t len_s1, len_s2;
+	char	*joined_string;
+	size_t1	len_s1;
+	size_t2	len_s2;
 
 	if (!s1 || !s2)
-	return NULL;
-
+		return (NULL);
 	len_s1 = strlen(s1);
 	len_s2 = strlen(s2);
-
 	joined_string = (char *)malloc(sizeof(char) * (len_s1 + len_s2 + 1));
 	if (!joined_string)
-		return NULL;
-
+		return (NULL);
 	strcpy(joined_string, s1);
 	strcat(joined_string, s2);
-
-	return joined_string;
+	return (joined_string);
 }
 
 // Programa principal para probar la función

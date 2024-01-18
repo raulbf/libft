@@ -6,13 +6,13 @@
 /*   By: rberrio- <rberrio-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/04 12:55:43 by marvin            #+#    #+#             */
-/*   Updated: 2024/01/17 12:38:27 by rberrio-         ###   ########.fr       */
+/*   Updated: 2024/01/18 20:00:47 by rberrio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*#include <stdio.h>
+#include <stdio.h>
 #include <stdlib.h>
-#include <string.h>*/
+#include <string.h>
 
 void	*ft_malloc(size_t size)
 {

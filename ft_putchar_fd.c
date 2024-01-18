@@ -6,11 +6,11 @@
 /*   By: rberrio- <rberrio-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 19:47:23 by marvin            #+#    #+#             */
-/*   Updated: 2024/01/17 13:06:00 by rberrio-         ###   ########.fr       */
+/*   Updated: 2024/01/18 20:05:05 by rberrio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <unistd.h> // para write
+#include <unistd.h>
 
 void	ft_putchar_fd(char c, int fd)
 {

@@ -3,27 +3,31 @@
 /*                                                        :::      ::::::::   */
 /*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: rberrio- <rberrio-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 19:17:46 by marvin            #+#    #+#             */
-/*   Updated: 2024/01/09 19:17:46 by marvin           ###   ########.fr       */
+/*   Updated: 2024/01/18 20:32:24 by rberrio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stddef.h> // para size_t
+#include <stddef.h>
 
-void ft_striteri(char *s, void (*f)(unsigned int, char*))
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
+	size_t	i;
+
 	if (s == NULL || f == NULL)
 	{
-		return;
+		return ;
 	}
-
-	for (size_t i = 0; s[i] != '\0'; ++i) {
+	i = 0;
+	while (s[i] != '\0')
+	{
 		f(i, &s[i]);
+		i++;
 	}
 }
-//Para probar esta función,usaremos una función que,convierta cada carácter a mayúsculas.
+
 /*#include <ctype.h> // para toupper
 #include <stdio.h> // para printf
 

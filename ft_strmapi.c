@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: rberrio- <rberrio-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/04 23:27:09 by marvin            #+#    #+#             */
-/*   Updated: 2024/01/04 23:27:09 by marvin           ###   ########.fr       */
+/*   Updated: 2024/01/18 20:47:55 by rberrio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,31 +14,28 @@
 #include <stdlib.h>
 #include <string.h>
 
-char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	char *mapped_string;
-	unsigned int i;
+	char	*mapped_string;
+	unsigned int	i;
 
 	if (!s || !f)
-		return NULL;
-
+		return (NULL);
 	mapped_string = (char *)malloc(sizeof(char) * (strlen(s) + 1));
 	if (!mapped_string)
-		return NULL;
-
-	for (i = 0; s[i]; i++)
+		return (NULL);
+	while (i = 0; s[i]; i++)
 		mapped_string[i] = f(i, s[i]);
 	mapped_string[i] = '\0';
-
-	return mapped_string;
+	return (mapped_string);
 }
 
-char to_upper(unsigned int i, char c)
+char	to_upper(unsigned int i, char c)
 {
 	if (c >= 'a' && c <= 'z')
-		return c - 'a' + 'A';
+		return (c - 'a' + 'A');
 	else
-		return c;
+		return (c);
 }
 
 /*int main()
@@ -60,7 +57,9 @@ char to_upper(unsigned int i, char c)
 	return 0;
 }*/
 
-/*Este programa convierte todos los caracteres de la cadena “Hola, mundo!” a mayúsculas.
+/*Este programa convierte todos los caracteres de la cadena
+ “Hola, mundo!” a mayúsculas.
 Si la función ft_strmapi funciona correctamente,
 el programa imprimirá “La cadena mapeada es: ‘HOLA, MUNDO!’”.
-Si la reserva de memoria falla, el programa imprimirá “Error al reservar memoria para la cadena mapeada.”.*/
+Si la reserva de memoria falla, el programa imprimirá: 
+“Error al reservar memoria para la cadena mapeada.”.*/

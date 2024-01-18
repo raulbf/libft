@@ -3,21 +3,24 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: rberrio- <rberrio-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/22 15:16:47 by marvin            #+#    #+#             */
-/*   Updated: 2023/12/22 15:16:47 by marvin           ###   ########.fr       */
+/*   Updated: 2024/01/18 20:00:22 by rberrio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char *ft_strchr(const char *s, int c)
+#include <stdio.h>
+#include <string.h>
+
+char	*ft_strchr(const char *s, int c)
 {
-    while (*s != (char)c)
-    {
-        if (!*s++)
-            return 0;
-    }
-    return s;
+	while (*s != (char)c)
+	{
+		if (!*s++)
+			return (0);
+	}
+	return (s);
 }
 /*
 int main()
@@ -26,7 +29,8 @@ int main()
     char c = 'M';
     const char *res = ft_strchr(str, c);
     if (res)
-        printf("El carácter '%c' se encontró en la cadena en la posición: %ld\n", c, res - str);
+        printf("El carácter '%c' se encontró en la cadena en la posición:
+         %ld\n", c, res - str);
     else
         printf("El carácter '%c' no se encontró en la cadena.\n", c);
     return 0;
