@@ -6,7 +6,7 @@
 /*   By: rberrio- <rberrio-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/04 23:27:09 by marvin            #+#    #+#             */
-/*   Updated: 2024/01/18 20:47:55 by rberrio-         ###   ########.fr       */
+/*   Updated: 2024/01/19 20:18:23 by rberrio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,16 +16,20 @@
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	char	*mapped_string;
+	char			*mapped_string;
 	unsigned int	i;
 
+	i = 0;
 	if (!s || !f)
 		return (NULL);
 	mapped_string = (char *)malloc(sizeof(char) * (strlen(s) + 1));
 	if (!mapped_string)
 		return (NULL);
-	while (i = 0; s[i]; i++)
+	while (s[i])
+	{
 		mapped_string[i] = f(i, s[i]);
+		i++;
+	}
 	mapped_string[i] = '\0';
 	return (mapped_string);
 }
