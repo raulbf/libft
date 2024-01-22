@@ -6,7 +6,7 @@
 /*   By: rberrio- <rberrio-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/04 21:50:51 by marvin            #+#    #+#             */
-/*   Updated: 2024/01/18 20:39:46 by rberrio-         ###   ########.fr       */
+/*   Updated: 2024/01/22 20:04:56 by rberrio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*joined_string;
-	size_t1	len_s1;
-	size_t2	len_s2;
+	size_t	len_s1;
+	size_t	len_s2;
 
 	if (!s1 || !s2)
 		return (NULL);

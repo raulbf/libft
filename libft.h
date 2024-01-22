@@ -6,7 +6,7 @@
 /*   By: rberrio- <rberrio-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 19:19:46 by rberrio-          #+#    #+#             */
-/*   Updated: 2024/01/22 18:44:34 by rberrio-         ###   ########.fr       */
+/*   Updated: 2024/01/22 19:58:57 by rberrio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <stddef.h>
 # include <string.h>
 # include <stdlib.h>
+# include <unistd.h>
 // prototipos
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);

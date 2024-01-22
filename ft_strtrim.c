@@ -6,18 +6,17 @@
 /*   By: rberrio- <rberrio-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/04 22:05:01 by marvin            #+#    #+#             */
-/*   Updated: 2024/01/22 18:26:44 by rberrio-         ###   ########.fr       */
+/*   Updated: 2024/01/22 20:07:10 by rberrio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	size_t	start;
 	size_t	end;
-	sizr_t	len;
+	size_t	len;
 	char	*trimmed_string;
 
 	if (!s1 || !set)

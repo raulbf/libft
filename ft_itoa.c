@@ -6,7 +6,7 @@
 /*   By: rberrio- <rberrio-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/04 23:08:31 by marvin            #+#    #+#             */
-/*   Updated: 2024/01/17 13:04:25 by rberrio-         ###   ########.fr       */
+/*   Updated: 2024/01/22 20:07:52 by rberrio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ char	*ft_itoa(int n)
 	int		sign;
 
 	len = ft_numlen(n);
-	sing = 1;
+	sign = 1;
 	if (n < 0)
 		sign = -1;
 	str = (char *)malloc(sizeof(char) * (len + 1));

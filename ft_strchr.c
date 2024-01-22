@@ -6,14 +6,14 @@
 /*   By: rberrio- <rberrio-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/22 15:16:47 by marvin            #+#    #+#             */
-/*   Updated: 2024/01/18 20:00:22 by rberrio-         ###   ########.fr       */
+/*   Updated: 2024/01/22 19:30:46 by rberrio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <string.h>
 
-char	*ft_strchr(const char *s, int c)
+const char	*ft_strchr(const char *s, int c)
 {
 	while (*s != (char)c)
 	{

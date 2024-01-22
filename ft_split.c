@@ -6,7 +6,7 @@
 /*   By: rberrio- <rberrio-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/04 22:16:25 by marvin            #+#    #+#             */
-/*   Updated: 2024/01/17 14:43:47 by rberrio-         ###   ########.fr       */
+/*   Updated: 2024/01/22 20:07:33 by rberrio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -114,7 +114,7 @@ char	**ft_split(char const *s, char c)
 	return (0);
 }
 
-/*Este programa divide la cadena “Hola, mundo!” en substrings
+Este programa divide la cadena “Hola, mundo!” en substrings
 utilizando la coma como delimitador.
 Si la función ft_split funciona correctamente,
 el programa imprimirá “La cadena dividida 0 es: ‘Hola’” y

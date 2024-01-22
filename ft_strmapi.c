@@ -6,7 +6,7 @@
 /*   By: rberrio- <rberrio-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/04 23:27:09 by marvin            #+#    #+#             */
-/*   Updated: 2024/01/19 20:18:23 by rberrio-         ###   ########.fr       */
+/*   Updated: 2024/01/22 20:08:35 by rberrio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,14 +32,6 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	}
 	mapped_string[i] = '\0';
 	return (mapped_string);
-}
-
-char	to_upper(unsigned int i, char c)
-{
-	if (c >= 'a' && c <= 'z')
-		return (c - 'a' + 'A');
-	else
-		return (c);
 }
 
 /*int main()

@@ -6,12 +6,11 @@
 /*   By: rberrio- <rberrio-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/04 14:25:38 by marvin            #+#    #+#             */
-/*   Updated: 2024/01/22 18:36:44 by rberrio-         ###   ########.fr       */
+/*   Updated: 2024/01/22 20:04:32 by rberrio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*#include <stdlib.h>
-#include <string.h>*/
+#include "libft.h"
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
@@ -51,9 +50,9 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		printf("Error al reservar memoria para la subcadena.\n");
 	}
 
-	return 0;*/
+	return 0;
 }
-/*Esta función crea una nueva cadena de caracteres
+Esta función crea una nueva cadena de caracteres
  que es una subcadena de la cadena original s.
  La subcadena comienza en el índice start y tiene una longitud máxima de len.
 Si la reserva de memoria falla, la función devuelve NULL.

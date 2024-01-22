@@ -6,12 +6,12 @@
 /*   By: rberrio- <rberrio-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/12 19:31:58 by rberrio-          #+#    #+#             */
-/*   Updated: 2024/01/18 20:42:42 by rberrio-         ###   ########.fr       */
+/*   Updated: 2024/01/22 19:26:07 by rberrio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*#include <stdio.h>
-#include <string.h>*/
+#include <stdio.h>
+#include <string.h>
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
