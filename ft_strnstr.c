@@ -6,64 +6,85 @@
 /*   By: rberrio- <rberrio-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 22:15:47 by marvin            #+#    #+#             */
-/*   Updated: 2024/01/19 20:30:01 by rberrio-         ###   ########.fr       */
+/*   Updated: 2024/01/22 18:18:23 by rberrio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <string.h>
 
+char	*find_needle(const char *haystack,
+const char *needle, size_t n, size_t i)
+{
+	size_t	j;
+
+	j = 0;
+	while (haystack[i + j] == needle[j]
+		&& needle[j] != '\0'
+		&& (i + j) < n)
+	{
+		j++;
+	}
+	if (needle[j] == '\0')
+	{
+		return (char *haystack + i);
+	}
+	return (NULL);
+}
+
 char	*ft_strnstr(const char *haystack, const char *needle, size_t n)
 {
+	size_t	i;
+	char	*found;
+
+	i = 0;
 	if (!*needle)
 	{
-	return (char *)haystack;
+		return (char *haystack);
 	}
-
-	while (size_t i = 0; i < n; i++)
+	while (i < n)
 	{
 		if (haystack[i] == '\0')
 		{
 			return (NULL);
 		}
-
 		if (haystack[i] == *needle)
 		{
-			size_t j = 0;
-		while (haystack[i + j] == needle[j] && needle[j] != '\0' && (i + j) < n)
-		{
-		j++;
+			found = find_needle(haystack, needle, n, i);
+			if (found != NULL)
+			{
+				return (found);
+			}
 		}
-		if (needle[j] == '\0')
-		{
-			return (char *)&haystack[i];
-		}
-		}
+		i++;
 	}
-
-    return (NULL);
+	return (NULL);
 }
 
-/*
-int main()
+/*int main()
 {
-    const char *haystack = "Hola Mundo";
-    const char *needle = "Mundo";
-    char *res = ft_strnstr(haystack, needle, strlen(haystack));
+	char haystack[]
+	char needle[]
+	
+	haystack = "Hola, soy aguja!";
+	needle = "aguja";
+	char	*result;
 
-    if (res != NULL)
-    {
-        printf("La cadena '%s' se encontró en la posición: %ld\n", needle,
-		 res - haystack);
-    }
-    else
-    {
-        printf("La cadena '%s' no se encontró en la cadena.\n", needle);
-    }
-
-    return 0;
-}*/
-/*
-Este programa de prueba busca la cadena “Mundo” en la cadena “Hola Mundo” 
-utilizando la función ft_strnstr. 
-Luego imprime la posición de la cadena en la cadena.*/
+	result = ft_strnstr(haystack, needle, sizeof(haystack));
+	if (result != NULL)
+	{
+		printf("'%s' encontrado en '%s'\n", needle, haystack);
+	}
+	else
+	{
+		printf("'%s' no encontrado en '%s'\n", needle, haystack);
+	}
+	return (0);
+}
+*/
+/*Este programa busca la cadena “Copilot” en la cadena “Hola, soy Copilot!”
+utilizando la función ft_strnstr.
+Si la cadena se encuentra,
+imprime un mensaje indicando que se encontró la cadena;
+si no se encuentra, imprime un mensaje indicando que no se encontró la cadena.
+ Puedes cambiar las cadenas de prueba y el tamaño para probar diferentes casos.*/

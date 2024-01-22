@@ -3,43 +3,39 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: rberrio- <rberrio-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/04 22:05:01 by marvin            #+#    #+#             */
-/*   Updated: 2024/01/04 22:05:01 by marvin           ###   ########.fr       */
+/*   Updated: 2024/01/22 18:26:44 by rberrio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <string.h>
 
-char *ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	size_t start, end, len;
-	char *trimmed_string;
+	size_t	start;
+	size_t	end;
+	sizr_t	len;
+	char	*trimmed_string;
 
 	if (!s1 || !set)
-		return NULL;
-
+		return (NULL);
 	start = 0;
 	while (s1[start] && strchr(set, s1[start]))
 		start++;
-
 	end = strlen(s1);
 	while (end > start && strchr(set, s1[end - 1]))
 		end--;
-
 	len = end - start;
 	trimmed_string = (char *)malloc(sizeof(char) * (len + 1));
 	if (!trimmed_string)
-		return NULL;
-
+		return (NULL);
 	strncpy(trimmed_string, &s1[start], len);
 	trimmed_string[len] = '\0';
-
-	return trimmed_string;
+	return (trimmed_string);
 }
-
 /*int main()
 {
 	char const *s1 = "   Hola, mundo!   ";
@@ -63,4 +59,5 @@ char *ft_strtrim(char const *s1, char const *set)
 /*Este programa recorta los espacios en blanco de la cadena " Hola, mundo! ".
 Si la función ft_strtrim funciona correctamente,
 el programa imprimirá “La cadena recortada es: ‘Hola, mundo!’”.
-Si la reserva de memoria falla, el programa imprimirá “Error al reservar memoria para la cadena recortada.”.*/
+Si la reserva de memoria falla, 
+el programa imprimirá “Error al reservar memoria para la cadena recortada.”.*/
