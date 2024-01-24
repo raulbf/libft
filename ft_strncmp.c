@@ -6,12 +6,11 @@
 /*   By: rberrio- <rberrio-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/22 15:34:07 by marvin            #+#    #+#             */
-/*   Updated: 2024/01/19 20:26:10 by rberrio-         ###   ########.fr       */
+/*   Updated: 2024/01/24 18:54:44 by rberrio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
 int	ft_stmcmp(const char *s1, const char *s2, size_t n)
 {

@@ -6,13 +6,29 @@
 /*   By: rberrio- <rberrio-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/22 15:24:32 by marvin            #+#    #+#             */
-/*   Updated: 2024/01/22 20:43:50 by rberrio-         ###   ########.fr       */
+/*   Updated: 2024/01/24 18:52:38 by rberrio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)
+{
+	char	*last_occurrence ;
+
+	last_occurrence = NULL;
+	while (*s)
+	{
+		if (*s == c)
+			last_occurrence = (char *)s;
+		s++;
+	}
+	if (c == '\0')
+		last_occurrence = (char *)s;
+	return (last_occurrence);
+}
+
+/*char	*ft_strrchr(const char *s, int c)
 {
 	const char	*last_occurrence;
 	char		ch;
@@ -26,9 +42,9 @@ char	*ft_strrchr(const char *s, int c)
 		s++;
 	}
 	if (ch == '\0')
-			return ((char *)s);
+		return ((char *)s);
 	return ((char *)last_occurrence);
-}
+}*/
 /*
 int main()
 {
