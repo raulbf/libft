@@ -35,3 +35,7 @@ fclean: clean
 	@$(RM) $(NAME)
 re: fclean all
 .PHONY: all .c.o clean fclean re
+BONUS = ft_lstnew.c
+bonus: $(BONUS)
+gcc -c $(BONUS)
+ar rc libft.a $(BONUS:.c=.o)
